@@ -9,22 +9,22 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 stages:
-  - stage: Build
-    displayName: "This is job A"
+  - stage: A
+    displayName: "This is job Build"
     jobs:
-      - job: jobA
-  - stage: Run
-    displayName: "This is job B"
+      - job: Build
+  - stage: B
+    displayName: "This is job Run"
     jobs:
-      - job: jobB
-  - stage: Deploy
-    displayName: "This is job D"
+      - job: Run
+  - stage: C
+    displayName: "This is job Deploy"
     jobs:
-      - job: jobA
-  - stage: Production
-    displayName: "This is job D"
+      - job: Deploy
+  - stage: D
+    displayName: "This is job Production"
     jobs:
-      - job: jobB
+      - job: Production
       
 
 
