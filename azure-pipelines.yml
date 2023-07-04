@@ -1,22 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
-pool:
-  vmImage: ubuntu-latest
 stages:
   - stage: A
-    displayName: "This is job A"
+    displayName: "This job runs on ubuntu."
+    pool:
+     vmImage: ubuntu-latest
     jobs:
-      - job: jobA
-  - stage: B
-    displayName: "This is job B"
-    jobs:
-      - job: jobB
+      - job: A
+      - job: B
+        displayName: "This job runs on windows Machine."
+        pool:
+         vmImage: windows-latest
+    
+
       
 
 
