@@ -2,12 +2,12 @@ stages:
   - stage: A
     displayName: "This job runs on ubuntu."
     pool:
-     vm-Image:ubuntu-latest
+     vmImage:ubuntu-latest
     jobs:
       - job: B
         displayName: "This job runs on windows Machine."
         pool:
-         vm-Image:windows
+         vmImage:windows-latyest
     
 
       
