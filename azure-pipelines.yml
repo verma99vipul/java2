@@ -10,13 +10,21 @@ pool:
   vmImage: ubuntu-latest
 stages:
   - stage: A
-    displayName: "This is job A"
+    displayName: "This is job Build"
     jobs:
-      - job: jobA
+      - job: Build
   - stage: B
-    displayName: "This is job B"
+    displayName: "This is job Run"
     jobs:
-      - job: jobB
+      - job: Run
+  - stage: C
+    displayName: "This is job Deploy"
+    jobs:
+      - job: Deploy
+  - stage: D
+    displayName: "This is job Production"
+    jobs:
+      - job: Production
       
 
 
